@@ -1,0 +1,50 @@
+#imgTop{
+    top: 0;
+    height: 100vh;
+}
+
+#imgTop #img{
+    float: left;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    background-image: url('/back-gabriel.svg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position: center center;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    /* padding: 3em; */
+    right: 0;
+    text-align: center;
+    top: 5;
+    background-size: cover;
+}
+
+#imgTop #img .caption{
+    position: absolute;
+    max-width: 600px;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    /*background: rgba(244, 121, 51, .7);*/
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    text-align: justify;
+    font-size: 1.25rem;
+}
+
+#imgTop #img .caption #nameTop{
+    font-size: 4rem;
+}
+
+#imgTop #img .caption #titleTop{
+    font-size: 2rem;
+    color: darkgray;
+}

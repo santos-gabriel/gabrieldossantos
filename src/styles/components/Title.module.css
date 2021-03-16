@@ -1,0 +1,73 @@
+.section{
+    float: left;
+    width: 100%;
+}
+
+.section{
+    padding-top: 72px;
+}
+
+.sectionHeader{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+.sectionHeader .content{
+    max-width: 800px;
+}
+
+.sectionHeader h1{
+    font-weight: normal;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.sectionHeader h1::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    max-width: 480px;
+    background: var(--bright-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.sectionHeader h1::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -12px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--bright-color);
+}
+
+.sectionHeader h1 span{
+    position: relative;
+}
+
+.sectionHeader h1 span::before{
+    content: "";
+    position: absolute;
+    background: var(--bright-color);
+    bottom: -9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.content{
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+}

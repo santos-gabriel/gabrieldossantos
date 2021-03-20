@@ -13,7 +13,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
-    width: 600px;
+    width: auto;
+    max-width: 37em;
+    min-width: 20rem;
     padding: 20px;
     /*background: #333;*/
     box-sizing: border-box;
@@ -72,4 +74,56 @@
 
 
 
+/* @media(max-width: 959.9px) {
+    .skills {
+        float: none;
+    }
+    
+    .center {
+        text-align: center;
+    }
+}
+
+@media(min-width: 360px) {
+    .skills, .center {
+        max-width: 300px;
+    }
+}
+
+@media(min-width: 530px) {    
+    .skill, .center{
+        max-width: 100%;
+        width: auto;
+    }
+    .skill{
+        width: 100%;
+    }
+}
+
+@media(min-width: 960px) {
+    .skills{
+        max-width: 600px;
+        width: 400px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .skills{
+        max-width: 700px;
+        width: 500px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .skills{
+        max-width: 900px;
+        width: 550px;
+    }
+
+    .skills{
+        float: right;
+        right: 0;
+    }
+    
+} */
 

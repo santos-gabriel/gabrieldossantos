@@ -1,6 +1,20 @@
+import { useContext, useEffect, useState } from 'react';
+import { NavBarContext } from '../contexts/NavBarContext';
 import styles from '../styles/components/HomeTop.module.css';
 
 export function HomeTop () {
+    const { handleActiveItem, handleFixed } = useContext(NavBarContext);    
+    useEffect (() => {
+      document.addEventListener('scroll', e => {
+        let scrollPosition = document.scrollingElement.scrollTop;
+        if (scrollPosition >= 50) {
+          handleActiveItem(1);
+          handleFixed(true);                   
+        } else {
+          handleFixed(false);          
+        }
+      });
+    }, []);    
     return (
         // image top
         <div id={styles.imgTop}>

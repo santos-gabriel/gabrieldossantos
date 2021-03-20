@@ -1,11 +1,23 @@
 import { faGithub, faInstagram, faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useContext, useState } from 'react';
+import { NavBarContext } from '../contexts/NavBarContext';
 
 import styles from '../styles/components/NavBar.module.css';
 
 export function NavBar() {
+    
+    const [activeColapseNavBarToggle, setActiveColapseNavBarToggle] = useState(false);
+
+    const { isFixed, activeItemIndex } = useContext(NavBarContext);
+
+    function handleColapseNavBar(e) {        
+        e.preventDefault();
+        setActiveColapseNavBarToggle(!activeColapseNavBarToggle);
+    }
+
     return(
-        <header className={`row ${styles.header}`}>
+        <header className={isFixed ? `row ${styles.header} ${styles.fixed}` : `row ${styles.header}`}>
         <h1 className='font-zero'>Portifólio Gabriel dos Santos software developer</h1>
         <div className='content'>
             {/* <!--logo header--> */}
@@ -15,13 +27,13 @@ export function NavBar() {
                 </a>
             </div>            
             {/* <!--menu toggle for mobile--> */}
-            <a href="#" id={styles.navToggle}>
+            <a href="/" id={styles.navToggle} className={activeColapseNavBarToggle ? styles.active : ''} onClick={(e) => handleColapseNavBar(e)}>
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             {/* <!--menu--> */}
-            <div className={styles.headerCollapse}>
+            <div className={`${styles.headerCollapse} ${activeColapseNavBarToggle ? styles.active : ''}`}>
               <nav className={styles.headerNav}>
                   <h1 className='font-zero'>Navegação do site</h1>
                   <ul>

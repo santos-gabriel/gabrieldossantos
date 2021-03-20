@@ -166,3 +166,137 @@
 .headerRedes a:hover {
     color: var(--secondary-color);
 }
+
+
+
+@media(max-width: 959.9px) {
+    #navToggle,
+    .headerRedes {
+        display: block;
+    }
+
+    .headerRedes {
+        float: none;
+    }
+
+    .headerLogo {
+        max-width: 180px;
+        width: 60%;
+        padding: 3px 0;
+    }
+
+    .headerLogo  a img{
+        height: 75px;
+    }
+    
+    /*menu*/
+    .headerCollapse{
+        overflow-y: auto;
+        position: fixed;
+        background: rgba(16, 16, 16, .95);
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        padding: 15px;
+        top: -100%;
+        left: 0;
+        transition: top .4s ease;
+        -webkit-transition: top .4s ease;
+    }
+
+    .headerCollapse.active {
+        top: 0%;
+        
+    }
+
+    .headerNav{
+        padding: 25px 0;
+        float: none;
+    }
+
+    .headerNav ul li{
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .headerNav ul li a{
+        color: #ffffff;
+        font-size: 1.4rem;
+    }
+
+    .headerSearch{
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .headerSearch input{
+        padding: 15px;
+    }
+}
+
+@media(min-width: 960px) {
+    @keyframes animaHeader {
+        0%{
+            opacity: 0;
+            transform: translateY(-100%);
+            -webkit-transform: translateY(-100%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0%);
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+    .fixed{
+        position: fixed;
+        background: #101010;
+        z-index: 20; 
+        z-index: 10000;
+        animation: animaHeader .7s ease-in-out .4s backwards;
+        -webkit-animation: animaHeader .7s ease-in-out .4s backwards;
+    }
+
+    .headerNav{
+        margin-left: 2%;
+    }
+
+    .headerNav ul li a.active:before{
+        background: #f47933;
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        top: -31px;
+        left: 0;
+    }
+
+}
+ 
+@media(min-width: 1024px) {
+    .headerNav ul li{
+        margin: 0 6px;
+    }
+}
+
+@media(min-width: 1144px){
+    .headerLogo{
+        width: auto;
+    }
+    .headerNav ul li a{
+        font-size: 1rem;
+    }
+
+}
+
+@media(min-width: 1280px) {
+    .headerNav ul li{
+        margin: 0 8px;
+    }
+    .headerSearch{
+        width: 260px;
+    }
+}   

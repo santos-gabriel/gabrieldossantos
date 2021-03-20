@@ -11,7 +11,7 @@ export function Title(props: TitleProps) {
             <section className={styles.section} id={props.id}>
                 <header className={styles.sectionHeader}>
                 <div className='content'>
-                    <h1><span>Sobre</span></h1>
+                    <h1><span>{props.text}</span></h1>
                 </div>
                 </header>
             </section>

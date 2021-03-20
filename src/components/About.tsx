@@ -8,7 +8,7 @@ export function About () {
         <>
             <Title text={'sobre'} id={'about'}/>
         
-            <div className='row'>
+            {/* <div className={`row ${styles.row}`}> */}
                 <div className={`content ${styles.about}`}>
 
 
@@ -50,7 +50,7 @@ export function About () {
                 </div>
                 
                 </div>
-            </div>
+            {/* </div> */}
         </>
     );
 }

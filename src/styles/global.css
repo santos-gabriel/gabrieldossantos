@@ -27,7 +27,7 @@ body{
   color: var(--primary-color);/*#2c3e50*/
 }
 
-body, input, textarea, button {
+body, input, textarea, button, a {
   font: 400 1rem "Roboto", sans-serif;
 }
 
@@ -149,3 +149,23 @@ h1,h2,h3,h4,h5,h6{
   font-family: 'Ubuntu', sans-serif;
   color: var(--title-color);
 }
+
+
+/* @media(min-width: 360px) {
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media(min-width: 630px) {
+  .content .container{
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media(min-width: 960px) {
+  p {
+    font-size: 1rem;
+  }
+} */

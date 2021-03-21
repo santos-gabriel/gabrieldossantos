@@ -4,9 +4,8 @@
   --secondary-color: #F27405;
   --tertiary-color: #82523c;
   --bright-color: #0583F2;
-  font-size: 1rem; /*converter rem para pixel => pixel dividido por 16 = rem*/
+  font-size: 1rem; 
 }
-
 
 *,*:before,*:after{
   margin: 0;
@@ -14,7 +13,6 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-
 
 html{
   font-family: 'Roboto', sans-serif;
@@ -24,7 +22,7 @@ html{
 body{
   font-family: 'Roboto', sans-serif;
   background: #101010;
-  color: var(--primary-color);/*#2c3e50*/
+  color: var(--primary-color);
 }
 
 body, input, textarea, button, a {
@@ -41,7 +39,7 @@ ul{
 
 a:hover,
 i:hover{
-  color: var(--secondary-color);/*#f47933*/
+  color: var(--secondary-color);
 }
 
 button:hover{
@@ -65,7 +63,6 @@ textarea:focus, input:focus, select:focus{
   outline: 0;
 }
 
-/*GERAIS*/
 .font-zero{
   font-size: 0%;
 }
@@ -150,22 +147,3 @@ h1,h2,h3,h4,h5,h6{
   color: var(--title-color);
 }
 
-
-/* @media(min-width: 360px) {
-  p {
-    font-size: 0.9rem;
-  }
-}
-
-@media(min-width: 630px) {
-  .content .container{
-    display: flex;
-    width: 100%;
-  }
-}
-
-@media(min-width: 960px) {
-  p {
-    font-size: 1rem;
-  }
-} */

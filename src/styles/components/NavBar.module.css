@@ -161,12 +161,20 @@
     color: #fff;
     font-size: 2rem;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .headerRedes a:hover {
     color: var(--secondary-color);
 }
 
+.itemNavbar {
+    cursor: pointer;
+}
+
+.animationScroll {
+    animation: 0.80s;
+}
 
 
 @media(max-width: 959.9px) {

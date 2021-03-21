@@ -1,18 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram, faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 import styles from '../styles/components/Footer.module.css';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 export function Footer () {
     return (
-        // <!--start FOOTER-->
+        
         <footer>
-            <section className='row'>
+            <div className='row'>
             <h1 className='font-zero'>Agradecimentos</h1>
             <div className='content'>
                 <div className={styles.footer}>
-                {/* <!--contacts social links and icons--> */}
+                
                 <div className={styles.footerRedes}>
                     <a href="https://www.github.com/Santos-Gabriel" target="_blank">
                         <FontAwesomeIcon icon={faGithub} />                        
@@ -30,7 +30,7 @@ export function Footer () {
                         <FontAwesomeIcon icon={faTelegram} />                        
                     </a>
                 </div>
-                {/* <!--text footer--> */}
+
                 <div className={styles.footerTextos}>
                     <p>
                     Copyright © {new Date().getFullYear()} Todos os direitos reservados
@@ -41,8 +41,8 @@ export function Footer () {
 
                 </div>
             </div>
-            </section>
+            </div>
         </footer>
-        // <!--end FOOTER-->
+
     );
 }

@@ -6,15 +6,21 @@ interface TitleProps {
 }
 
 export function Title(props: TitleProps) {
+    
     return (
+
         <div>
-            <section className={styles.section} id={props.id}>
+            <section id={props.id} className={styles.section} >
                 <header className={styles.sectionHeader}>
-                <div className='content'>
-                    <h1><span>{props.text}</span></h1>
-                </div>
+                    <div className='content'>
+                        <h1>
+                            <span>{props.text}</span>
+                        </h1>
+                    </div>
                 </header>
             </section>
         </div>
+
     );
+
 }

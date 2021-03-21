@@ -1,14 +1,14 @@
-import styles from '../styles/components/About.module.css';
-import sytlesPercentBar from '../styles/components/PercentBar.module.css';
 import { PercentBar } from './PercentBar';
 import { Title } from './Title';
+
+import styles from '../styles/components/About.module.css';
+import sytlesPercentBar from '../styles/components/PercentBar.module.css';
 
 export function About () {
     return (
         <>
-            <Title text={'sobre'} id={'about'}/>
-        
-            {/* <div className={`row ${styles.row}`}> */}
+            <Title text={'sobre'} id={'aboutTitle'}/>
+                    
                 <div className={`content ${styles.about}`}>
 
 
@@ -27,12 +27,6 @@ export function About () {
                 </div>
 
 
-
-
-
-
-
-
                 <div className={sytlesPercentBar.skills}>
                     <div className={sytlesPercentBar.center}>
                         <h1 className="font-zero">Software Skills</h1>
@@ -49,8 +43,7 @@ export function About () {
                     </div>
                 </div>
                 
-                </div>
-            {/* </div> */}
+                </div>            
         </>
     );
 }

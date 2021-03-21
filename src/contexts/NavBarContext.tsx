@@ -1,10 +1,8 @@
 import { createContext, ReactNode, useState } from "react";
 
 
-interface NavBarProviderData {
-    activeItemIndex: number;
-    isFixed: boolean;
-    handleActiveItem: (itemIndex: number) => void;
+interface NavBarProviderData {    
+    isFixed: boolean;    
     handleFixed: (fixed: boolean) => void;
 }
 
@@ -15,16 +13,9 @@ interface NavBarProviderProps {
 
 export const NavBarContext = createContext({} as NavBarProviderData);
 
-
 export function NavBarProvider ({children}: NavBarProviderProps) {
-
-    const [activeItemIndex, setActiveItemIndex] = useState(0);
-    const [isFixed, setIsFixed] = useState(false);
-
-    function handleActiveItem (itemIndex: number) {
-        if (itemIndex !== activeItemIndex) 
-            setActiveItemIndex(itemIndex);                               
-    }
+    
+    const [isFixed, setIsFixed] = useState(false);    
 
     function handleFixed(fixed: boolean) {
         if (fixed !== isFixed) 
@@ -32,7 +23,7 @@ export function NavBarProvider ({children}: NavBarProviderProps) {
     }
 
     return (
-        <NavBarContext.Provider value={{activeItemIndex, isFixed, handleActiveItem, handleFixed}}>
+        <NavBarContext.Provider value={{isFixed, handleFixed}}>
             {children}
         </NavBarContext.Provider>
     );

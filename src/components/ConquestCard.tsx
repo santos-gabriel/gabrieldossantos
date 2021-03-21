@@ -1,5 +1,6 @@
-import { faAward, faMedal, faTrophy, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import styles from '../styles/components/ConquestCard.module.css';
 
 interface ConquestCardProps {
@@ -10,7 +11,7 @@ interface ConquestCardProps {
 
 export function ConquestCard (props: ConquestCardProps) {
     return (
-        // <!--circle card conquest-->
+
         <div className={styles.cardConquest}>
           <div className={styles.circleConquest}>
             <h2 className={styles.titleCardConquest}>

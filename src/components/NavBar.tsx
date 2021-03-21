@@ -1,15 +1,19 @@
+import { useContext, useState } from 'react';
+import { Link } from 'react-scroll';
+
 import { faGithub, faInstagram, faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useContext, useState } from 'react';
+
 import { NavBarContext } from '../contexts/NavBarContext';
 
 import styles from '../styles/components/NavBar.module.css';
+
 
 export function NavBar() {
     
     const [activeColapseNavBarToggle, setActiveColapseNavBarToggle] = useState(false);
 
-    const { isFixed, activeItemIndex } = useContext(NavBarContext);
+    const { isFixed } = useContext(NavBarContext);
 
     function handleColapseNavBar(e) {        
         e.preventDefault();
@@ -17,33 +21,76 @@ export function NavBar() {
     }
 
     return(
+        
         <header className={isFixed ? `row ${styles.header} ${styles.fixed}` : `row ${styles.header}`}>
         <h1 className='font-zero'>Portifólio Gabriel dos Santos software developer</h1>
+        
         <div className='content'>
-            {/* <!--logo header--> */}
+            
             <div className={styles.headerLogo}>
-                <a href="#" title="Gabriel dos Santos">
+                <a href="/" title="Gabriel dos Santos">
                     <img src="/logo.svg" alt="Logomarca" />
                 </a>
             </div>            
-            {/* <!--menu toggle for mobile--> */}
-            <a href="/" id={styles.navToggle} className={activeColapseNavBarToggle ? styles.active : ''} onClick={(e) => handleColapseNavBar(e)}>
+            
+            <a 
+                href="/" 
+                id={styles.navToggle} 
+                className={activeColapseNavBarToggle ? styles.active : ''} 
+                onClick={(e) => handleColapseNavBar(e)}
+            >
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
-            {/* <!--menu--> */}
+            
             <div className={`${styles.headerCollapse} ${activeColapseNavBarToggle ? styles.active : ''}`}>
+
               <nav className={styles.headerNav}>
+
                   <h1 className='font-zero'>Navegação do site</h1>
                   <ul>
-                      <li><a href="#home" title="Home" className={styles.active}>Home</a></li>
-                      <li><a href="#about" title="Sobre">Sobre</a></li>
-                      <li><a href="#conquest" title="Conquistas">Conquistas</a></li>                      
-                  </ul>
-              </nav>
-              {/* <!--contacts social links and icons--> */}
-              <div className={styles.headerRedes}>
+                      <li>
+                          <Link 
+                            activeClass={styles.active}
+                            to="home"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}                            
+                            >
+                                <p className={styles.itemNavbar}>Home</p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                activeClass={styles.active}
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                >
+                                    <p className={styles.itemNavbar}>Sobre</p>
+                            </Link>
+                        </li>
+                        <li>     
+                            <Link 
+                                activeClass={styles.active}
+                                to="conquest"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                >
+                                    <p className={styles.itemNavbar}>Conquistas</p>
+                            </Link>                             
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <div className={styles.headerRedes}>
                     <a href="https://www.github.com/Santos-Gabriel" target="_blank">
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
@@ -59,10 +106,12 @@ export function NavBar() {
                     <a href="https://t.me/santos_gabriel" target="_blank"> 
                         <FontAwesomeIcon icon={faTelegram} /> 
                     </a>
-              </div>
-            </div>
+                </div>
 
+            </div>
         </div>
       </header>
+
     );
+
 }

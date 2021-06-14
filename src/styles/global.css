@@ -4,7 +4,23 @@
   --secondary-color: #F27405;
   --tertiary-color: #82523c;
   --bright-color: #0583F2;
+  --background-black-color: #101010;
   font-size: 1rem; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 5px;
 }
 
 *,*:before,*:after{
@@ -21,7 +37,7 @@ html{
 
 body{
   font-family: 'Roboto', sans-serif;
-  background: #101010;
+  background: var(--background-black-color);
   color: var(--primary-color);
 }
 

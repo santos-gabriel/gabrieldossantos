@@ -63,6 +63,22 @@
     box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
 }
 
+#skillsImg {
+    display: flex;
+    flex-direction: column;
+}
+
+#skillsImg div {
+    margin-bottom: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#skillsImg div img {
+    max-width: 5rem;
+    max-height: 5rem;
+}
 
 @media(max-width: 370px) {
     .center {

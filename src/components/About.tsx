@@ -9,7 +9,7 @@ export function About () {
         <>
             <Title text={'sobre'} id={'aboutTitle'}/>
                     
-                <div className={`content ${styles.about}`}>
+            <div className={`content ${styles.about}`}>
 
 
                 <div className={styles.imgAbout}>
@@ -30,20 +30,27 @@ export function About () {
                 <div className={sytlesPercentBar.skills}>
                     <div className={sytlesPercentBar.center}>
                         <h1 className="font-zero">Software Skills</h1>
-                        <PercentBar title={'java'} percent={65} />
-                        <PercentBar title={'javascript'} percent={30} />
-                        <PercentBar title={'delphi'} percent={65} />
-                        <PercentBar title={'html'} percent={50} />
-                        <PercentBar title={'css'} percent={40} />
-                        <PercentBar title={'react'} percent={20} />
-                        <PercentBar title={'react native'} percent={15} />
-                        <PercentBar title={'node'} percent={35} />
-                        <PercentBar title={'sql'} percent={65} />
-                        <PercentBar title={'git'} percent={60} />
+                        <div id={sytlesPercentBar.skillsImg}>
+                            <div>
+                                <img src="/html5.svg" alt="Gabriel" />
+                                <img src="/css3.svg" alt="Gabriel" />                                
+                                <img src="/javascript.svg" alt="Gabriel" />
+                            </div>
+
+                            <div>
+                                <img src="/java.svg" alt="Gabriel" />
+                                <img src="/spring.svg" alt="Gabriel" />
+                            </div>
+
+                            <div>
+                                <img src="/react.svg" alt="Gabriel" />
+                                <img src="/flutter.svg" alt="Gabriel" />                                
+                            </div>                            
+                        </div>                        
                     </div>
                 </div>
-                
-                </div>            
+            
+            </div>
         </>
     );
 }

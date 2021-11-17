@@ -7,6 +7,7 @@ import { Conquest } from '../components/Conquest';
 import { Footer } from '../components/Footer';
 
 import styles from '../styles/pages/Home.module.css';
+import { Projects } from '../components/Projects';
 
 
 export default function Home() {
@@ -27,6 +28,10 @@ export default function Home() {
 
         <section>
           <Conquest />
+        </section>
+
+        <section>
+          <Projects />
         </section>
         
         <Footer />      

@@ -13,6 +13,7 @@ export function About () {
 
 
                 <div className={styles.imgAbout}>
+                    <h1 className="font-zero">Sobre Gabriel</h1>
                     <img src="/front-gabriel.svg" alt="Gabriel" />
                     <p>Me chamo Gabriel dos Santos tenho 21 anos, sou desenvolvedor de software e formado em Análise e Desenvolvimento de Sistemas. 
                     Iniciei-me neste mundo da tecnologia aos meus 17 anos, tive minha primeira oportunidade na área da tecnologia aos meus 18 anos, sendo como auxiliar de TI em uma clínica psiquiátrica onde junto com a equipe de TI pestava suporte e zelava 

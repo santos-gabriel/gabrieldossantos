@@ -86,6 +86,18 @@ export function NavBar() {
                                     <p className={styles.itemNavbar}>Conquistas</p>
                             </Link>                             
                         </li>
+                        <li>
+                            <Link
+                                activeClass={styles.active}
+                                to="projects"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                <p className={styles.itemNavbar}>Projetos</p>
+                            </Link>
+                        </li>
                     </ul>
 
                 </nav>

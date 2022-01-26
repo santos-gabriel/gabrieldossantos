@@ -1,11 +1,11 @@
-:root{
+:root {
   --title-color: #322153;
   --primary-color: #4682b4;
-  --secondary-color: #F27405;
+  --secondary-color: #f27405;
   --tertiary-color: #82523c;
-  --bright-color: #0583F2;
+  --bright-color: #0583f2;
   --background-black-color: #101010;
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -23,89 +23,98 @@
   border-radius: 5px;
 }
 
-*,*:before,*:after{
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
-html{
-  font-family: 'Roboto', sans-serif;
+html {
+  font-family: "Roboto", sans-serif;
   height: 95%;
 }
 
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
   background: var(--background-black-color);
   color: var(--primary-color);
 }
 
-body, input, textarea, button, a {
+body,
+input,
+textarea,
+button,
+a {
   font: 400 1rem "Roboto", sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
+  color: var(--primary-color);
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
 a:hover,
-i:hover{
+i:hover {
   color: var(--secondary-color);
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
-img{
+img {
   max-width: 100%;
   border: 0;
 }
 
 input,
 button,
-textarea{
+textarea {
   border: 0;
 }
 
-textarea:focus, input:focus, select:focus{
+textarea:focus,
+input:focus,
+select:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
 }
 
-.font-zero{
+.font-zero {
   font-size: 0%;
 }
 
 .row,
-.section{
+.section {
   float: left;
   width: 100%;
 }
 
-.section{
+.section {
   padding-top: 72px;
 }
 
-.section-header{
+.section-header {
   text-align: center;
   margin-bottom: 40px;
   font-size: 1.2rem;
 }
 
-.section-header .content{
+.section-header .content {
   max-width: 800px;
 }
 
-.section-header h1{
+.section-header h1 {
   font-weight: normal;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 2rem;
   color: var(--primary-color);
   text-transform: uppercase;
@@ -114,7 +123,7 @@ textarea:focus, input:focus, select:focus{
   margin-bottom: 20px;
 }
 
-.section-header h1::after{
+.section-header h1::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -127,7 +136,7 @@ textarea:focus, input:focus, select:focus{
   -webkit-transform: translateX(-50%);
 }
 
-.section-header h1::before{
+.section-header h1::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -138,11 +147,11 @@ textarea:focus, input:focus, select:focus{
   border-top: 12px solid var(--bright-color);
 }
 
-.section-header h1 span{
+.section-header h1 span {
   position: relative;
 }
 
-.section-header h1 span::before{
+.section-header h1 span::before {
   content: "";
   position: absolute;
   background: var(--bright-color);
@@ -152,14 +161,18 @@ textarea:focus, input:focus, select:focus{
   height: 2px;
 }
 
-.content{
+.content {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Ubuntu', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
   color: var(--title-color);
 }
-

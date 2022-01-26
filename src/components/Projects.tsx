@@ -12,9 +12,19 @@ export function Projects() {
                 {/* <h1 className="font-zero">Projetos</h1> */}
                 <div className={`content ${stylesProjectCard.content}`}>
                     <div className={`container ${stylesProjectCard.container}`}>
-                        <ProjectCard title={"Project Title"} description={"Project Description"} imgSrc={"/java.svg"} />
-                        <ProjectCard title={"Project Title"} description={"Project Description"} imgSrc={"/java.svg"} />
-                        <ProjectCard title={"Project Title"} description={"Project Description"} imgSrc={"/java.svg"} />
+                        <ProjectCard 
+                            title={"SCM - Stock Control Manager"} 
+                            description={"Sistema para gerência de estoque"} 
+                            imgSrc={"/sales.png"} 
+                            link=""
+                        />
+                        
+                        <ProjectCard 
+                            title={"FinHelper"} 
+                            description={"Aplicativo para auxílio nas finanças pessoais"} 
+                            imgSrc={"/FinHelper_purple.svg"} 
+                            link="projects/finhelper"
+                        />
                     </div>
                 </div>
             </section>

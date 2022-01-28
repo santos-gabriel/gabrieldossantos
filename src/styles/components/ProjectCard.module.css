@@ -23,7 +23,7 @@
   background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 470px;
   border-radius: 3px;
@@ -39,13 +39,16 @@
 }
 
 .circleProject {
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 220px;
   height: 220px;
-  border-radius: 3px;
+  border-radius: 60px;
   box-shadow: inset 0 0 50px #000;
   background: #222;
   z-index: 1000;
+  display: flex;
 }
 
 .container .card {
@@ -55,27 +58,19 @@
 .titleCardProject {
   color: #777;
   position: relative;
-  top: -100px;
 }
 
 .cardProject:hover .titleCardProject {
   color: #fff;
 }
 
-.imgProject {
-  position: relative;
-}
-
-.imgProject img {
+.circleProject .img {
   color: #777;
-  /* font-size: 8rem; */
-  width: 10rem;
-  height: 10rem;
-  /* padding: 16px 0 43px 0; */
-  margin-bottom: 20px;
+  max-width: 10rem;
+  max-height: 10rem;
 }
 
-.cardProject:hover .imgProject img {
+.cardProject:hover .circleProject .img {
   color: #fff;
 }
 
@@ -87,10 +82,6 @@
   font-size: 18px;
   letter-spacing: 1px;
   transition: 0.5s;
-}
-
-.cardProject:hover .titleCardProject {
-  color: #fff;
 }
 
 .cardProject:hover .descriptionProject {

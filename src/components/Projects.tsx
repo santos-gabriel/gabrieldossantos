@@ -21,7 +21,7 @@ export function Projects() {
                         
                         <ProjectCard 
                             title={"FinHelper"} 
-                            description={"Aplicativo para auxílio nas finanças pessoais"} 
+                            description={"Aplicativo para auxílio de finanças pessoais"} 
                             imgSrc={"/FinHelper_purple.svg"} 
                             link="projects/finhelper"
                         />

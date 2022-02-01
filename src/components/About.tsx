@@ -44,8 +44,13 @@ export function About () {
                             </div>
 
                             <div>
-                                <img src="/react.svg" alt="Gabriel" />
+                                <img src="/dart.svg" alt="Gabriel" />
                                 <img src="/flutter.svg" alt="Gabriel" />                                
+                            </div>                            
+
+                            <div>
+                                <img src="/git.svg" alt="Gabriel" />
+                                {/* <img src="/mysql.svg" alt="Gabriel" />*/}
                             </div>                            
                         </div>                        
                     </div>

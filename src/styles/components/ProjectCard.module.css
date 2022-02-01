@@ -122,11 +122,21 @@
 .captionProject {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 10px;
+  width: 95%;
 }
 
 .captionProject div {
   margin: 5px;
+}
+
+.captionProject div:first-child {
+  margin: 5px 10px 5px 5px;
+}
+
+.captionProject div p:first-child {
+  font-weight: bold;
 }
 
 @media (min-width: 1103px) {

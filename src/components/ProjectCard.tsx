@@ -2,8 +2,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/components/ProjectCard.module.css';
 
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { link } from 'fs';
+import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
+
 
 interface ProjectCardProps {
     title: string,
@@ -46,7 +46,7 @@ export function ProjectCard(props: ProjectCardProps) {
                         </p>
                     </div>
                     <div>
-                        <FontAwesomeIcon icon={faArrowRight}/>
+                        <FontAwesomeIcon icon={faChevronCircleRight}/>
                     </div>
                 </a>
 

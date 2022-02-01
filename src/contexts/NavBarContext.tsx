@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 
 interface NavBarProviderData {    
@@ -18,8 +18,7 @@ export function NavBarProvider ({children}: NavBarProviderProps) {
     const [isFixed, setIsFixed] = useState(false);    
 
     function handleFixed(fixed: boolean) {
-        if (fixed !== isFixed) 
-            setIsFixed(fixed);
+        setIsFixed(fixed);
     }
 
     return (

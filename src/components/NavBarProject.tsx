@@ -1,42 +1,46 @@
-import { faGithub, faGooglePlay, faInstagram, faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
+import { faChevronCircleLeft, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ReactNode } from 'react';
 import styles from '../styles/components/NavBarProject.module.css';
 
 interface NavBarProjectProps {
-    projectName: String;
+    projectName: String,
+    projectImage: string,
+    links: LinkProjects[],
+}
+
+export interface LinkProjects {
+    link: string,
+    icon: IconDefinition,
+    targetType: string,
 }
 
 export default function NavBarProject (props: NavBarProjectProps) {
     return (
-        
         <header className={`row ${styles.header} ${styles.fixed}`}>
-            <h1 className='font-zero'>FinHelper, aplicativo para auxílio nas finanças pessoais</h1>        
+            <h1 className='font-zero'>{props.projectName}</h1>        
             <div className={`content ${styles.contentHeader}`}>
                 
                 <div className={styles.headerLogo}>
-                    <a href="">
-                        <FontAwesomeIcon icon={faArrowLeft} />
+                    <a href="/">
+                        <FontAwesomeIcon icon={faChevronCircleLeft} />
                     </a>
                     
+                    <img src={props.projectImage} alt="Logomarca" />
                     <h1>{props.projectName}</h1>
-                        {/* <img src="/logo.svg" alt="Logomarca" /> */}
                     
-                </div>
-                        
+                </div>                        
                 
                 <div className={styles.headerRedes}>
-                        <a href="https://www.github.com/Santos-Gabriel" target="_blank">
-                            <FontAwesomeIcon icon={faGithub} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/gabriel-almeida-dos-santos" target="_blank"> 
-                            <FontAwesomeIcon icon={faGooglePlay} />
-                        </a>
+                    {props.links.map((e, _) => {
+                        return (<a href={e.link} target={e.targetType}>
+                            <FontAwesomeIcon icon={e.icon} />
+                        </a>);
+                    })}
                 </div>
-
                 
             </div>
         </header>
- 
     );
 }

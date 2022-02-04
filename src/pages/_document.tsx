@@ -5,7 +5,7 @@ export default class MyDocument extends Document {
     render(){
 
         return(
-            <Html>
+            <Html lang='pt-BR'>
 
                 <Head>
 
@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" 
                         rel="stylesheet" 
                     />
+                    <title>Gabriel Santos</title>
 
                 </Head>
 

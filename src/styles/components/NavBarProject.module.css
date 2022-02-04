@@ -1,5 +1,6 @@
 .header {
   border-top: 6px solid var(--primary-color); /*#2c3e50*/
+  max-height: 85px;
 }
 
 .headerLogo {

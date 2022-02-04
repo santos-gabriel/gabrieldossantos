@@ -10,11 +10,11 @@
 }
 
 .content .container {
-  position: relative;
   width: auto;
-  display: block;
-  justify-content: space-around;
+  justify-content: space-evenly;
   max-width: 1280px;
+  display: flex;
+  flex: auto;
 }
 
 .container .cardProject {
@@ -106,7 +106,8 @@
   color: #777;
 }
 
-.captionProject p, .captionProject a {
+.captionProject p,
+.captionProject a {
   font-size: 1rem;
   color: #fff;
   word-spacing: 1px;
@@ -140,11 +141,6 @@
 }
 
 @media (min-width: 1103px) {
-  .content .container {
-    display: flex;
-    justify-content: space-between;
-    flex: auto;
-  }
   .container .cardProject:first-child {
     margin-left: 5rem;
   }

@@ -12,12 +12,12 @@ export function Projects() {
                 {/* <h1 className="font-zero">Projetos</h1> */}
                 <div className={`content ${stylesProjectCard.content}`}>
                     <div className={`container ${stylesProjectCard.container}`}>
-                        <ProjectCard 
+                        {/* <ProjectCard 
                             title={"SCM - Stock Control Manager"} 
                             description={"Sistema para gerência de estoque"} 
                             imgSrc={"/sales.png"} 
                             link=""
-                        />
+                        /> */}
                         
                         <ProjectCard 
                             title={"FinHelper"} 

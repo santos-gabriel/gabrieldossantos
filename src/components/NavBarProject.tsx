@@ -6,7 +6,7 @@ import styles from '../styles/components/NavBarProject.module.css';
 
 interface NavBarProjectProps {
     projectName: String,
-    projectImage: string,
+    projectImage?: string,
     links: LinkProjects[],
 }
 
@@ -27,7 +27,7 @@ export default function NavBarProject (props: NavBarProjectProps) {
                         <FontAwesomeIcon icon={faChevronCircleLeft} />
                     </a>
                     
-                    <img src={props.projectImage} alt="Logomarca" />
+                    {props.projectImage && <img src={props.projectImage} alt="Logomarca" /> }
                     <h1>{props.projectName}</h1>
                     
                 </div>                        

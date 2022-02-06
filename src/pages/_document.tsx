@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
 
                 <Head>
 
-                    <link rel="shortcut icon" href="logo.svg" type="/logo.svg" />
+                    <link rel="shortcut icon" href="/logo.svg" type="/logo.svg" />
 
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link 

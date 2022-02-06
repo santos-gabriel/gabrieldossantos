@@ -15,28 +15,30 @@ interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps) {
     return (
         <>
-            <div className={styles.cardProject}>
-                
-                <div className={styles.circleProject}>               
-                    <img className={styles.img} src={props.imgSrc} alt={props.title} />
+            <a href={props.link}>
+                <div className={styles.cardProject}>
+                    <div className={styles.circleProject}>
+                        
+                            <img className={styles.img} src={props.imgSrc} alt={props.title} />
+                        
+                    </div>
+
+                    <div className={styles.captionProject}>
+                        <div>
+                            <p>
+                                {props.title}
+                            </p>
+                            <p>
+                                {props.description}
+                            </p>
+                        </div>
+                        <div>
+                            <FontAwesomeIcon icon={faChevronCircleRight}/>
+                        </div>
+                    </div>
                 </div>
+            </a>
 
-                <a href={props.link} className={styles.captionProject}>
-                    <div>
-                        <p>
-                            {props.title}
-                        </p>
-                        <p>
-                            {props.description}
-                        </p>
-                    </div>
-                    <div>
-                        <FontAwesomeIcon icon={faChevronCircleRight}/>
-                    </div>
-                </a>
-
-            </div>
-
-    </>
+        </>
     );
 }

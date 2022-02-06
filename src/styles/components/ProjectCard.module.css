@@ -89,6 +89,10 @@
   color: #fff;
 }
 
+.cardProject:hover .captionProject {
+  color: var(--secondary-color);
+}
+
 .container .cardProject::before {
   content: "";
   position: absolute;

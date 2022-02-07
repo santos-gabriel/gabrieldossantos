@@ -3,6 +3,7 @@
   max-height: 85px;
   float: none;
   background: #242323;
+  top: 0;
 }
 
 .headerLogo {
@@ -75,6 +76,7 @@
   z-index: 10000;
   animation: animaHeader 0.7s ease-in-out 0.4s backwards;
   -webkit-animation: animaHeader 0.7s ease-in-out 0.4s backwards;
+  top: 0;
 }
 
 @media (max-width: 959.9px) {

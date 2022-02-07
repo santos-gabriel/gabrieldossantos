@@ -4,6 +4,7 @@ import NavBarProject from "../../../components/NavBarProject";
 import { LinkProjects } from "../../../components/NavBarProject";
 import styles from '../../../styles/pages/Project.module.css';
 import { NavBarProjectsContext } from "../../../contexts/NavBarProjectsContext";
+import { Footer } from "../../../components/Footer";
 
 export default function Home() {
     let links: LinkProjects[] = [
@@ -17,8 +18,7 @@ export default function Home() {
         document.addEventListener('scroll', e => {
           let scrollPosition = document.scrollingElement.scrollTop;
           if (scrollPosition > 50) {
-            console.log(typeof(handleFixed))
-            handleFixed(true);                   
+            handleFixed(true);
           } else {
             handleFixed(false);          
           }
@@ -70,6 +70,7 @@ export default function Home() {
                 
                 
             </div>
+            <Footer />
         </div>
     );
 }

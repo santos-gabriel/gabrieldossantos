@@ -4,7 +4,8 @@
   grid-gap: 6rem;
   gap: 6rem;
   align-content: center;
-  margin: 80px 0 0 35px;
+  margin: 80px 0 80px 35px;
+  align-items: center;
 }
 
 .about {
@@ -12,6 +13,10 @@
   flex-direction: column;
   align-items: center;
   text-align: justify;
+  color: #fff;
+  font-size: 1rem;
+  word-spacing: 2.5px;
+  line-height: 25px;
 }
 
 .about div {
@@ -20,13 +25,14 @@
 
 .about div:last-child {
   margin-bottom: 0;
+  max-width: 42rem;
 }
 
 .photos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: 1px solid;
+  border-left: 1px solid #242323;
 }
 
 .photo {

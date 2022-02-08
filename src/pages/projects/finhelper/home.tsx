@@ -24,10 +24,9 @@ export default function Home() {
           }
         });
 
-        document.addEventListener('resize', e => {
+        window.addEventListener('resize', e => {
           let size = window.innerWidth;
-          if (size > 525) {
-            console.log(`size ${size}`)
+          if (size > 960) {
             setProjectTitle("FinHelper - Finances Helper");
           } else {
             setProjectTitle("FinHelper");
@@ -54,23 +53,25 @@ export default function Home() {
                     </div>
                     <div>
                         <p>
-                            FinHelper é um acrônimo para Finances Helper, que traduzido diretamente significa Ajudante de Finanças. 
+                            <b>FinHelper</b> é um acrônimo para <i>Finances Helper</i>, que traduzido diretamente para o português significa Ajudante de Finanças. 
                             E este é seu papel, ajudar nas finanças pessoais de todos que buscam um melhor controle de sua vida financeira.
                         </p>
                         <br />
                         <p>
                             FinHelper se trata de um aplicativo com o objetivo de auxiliar nas finanças pessoais, podendo gerenciar suas receitas
-                            e despesas pessoais, categorizando por <b>Fixas</b> e <b>Não Fixas</b> tanto as despesas quanto as receitas pode ser categorizadas.
+                            e despesas pessoais, categorizando por <b>Fixas</b> e <b>Não Fixas</b> tanto as despesas quanto as receitas podem ser categorizadas.
                         </p>
                         <p>
-                            Podendo ser acessado de qualquer lugar, podendo ser utilizado até mesmo sem acesso a internet. Basta apenas 
+                            FinHelper pode ser acessado de qualquer lugar, podendo ser utilizado até mesmo sem acesso a <b>internet</b>. Basta apenas 
                             um celular e uma vontade de organização financeira pessoal.
                         </p>
+                        <br />
                         <p>
-                            Para segurança e privacidade FinHelper conta com proteção de acesso, seja por senha, padrão ou até mesmo reconhecimento facial ou impressão digital.
+                            Para sua segurança e privacidade FinHelper conta com <b>proteção de acesso</b>, podendo ser habiliada a qualquer momento pelo app, 
+                            quando habilitada seu acesso ficará protegido seja por senha, padrão, reconhecimento facial ou impressão digital.
                         </p>
                         <p>
-                            Ainda pensando na segurança e privacidade, o aplicativo armazena seus dados em seu próprio dispositivo para que não seja armazenado dados em servidores.
+                            Ainda pensando na sua segurança e privacidade, o aplicativo armazena seus dados em seu próprio dispositivo.
                         </p>
                     </div>
                 </div>

@@ -3,18 +3,13 @@ import { faChevronCircleLeft, IconDefinition } from '@fortawesome/free-solid-svg
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactNode, useContext } from 'react';
 import { NavBarProjectsContext } from '../contexts/NavBarProjectsContext';
+import { LinkIcon } from '../models/LinkIcons';
 import styles from '../styles/components/NavBarProject.module.css';
 
-interface NavBarProjectProps {
+export interface NavBarProjectProps {
     projectName: String,
     projectImage?: string,
-    links: LinkProjects[],
-}
-
-export interface LinkProjects {
-    link: string,
-    icon: IconDefinition,
-    targetType: string,
+    links: LinkIcon[],
 }
 
 export default function NavBarProject (props: NavBarProjectProps) {

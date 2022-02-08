@@ -12,7 +12,7 @@ export default function Home() {
         {icon:faGooglePlay, link:"https://play.google.com/store/apps/", targetType:"_blank"}];
 
     const { handleFixed } = useContext(NavBarProjectsContext);
-    const [ projectTitle, setProjectTitle ] = useState("FinHelper");
+    const [ projectTitle, setProjectTitle ] = useState("FinHelper");    
 
     useEffect (() => {
         document.addEventListener('scroll', e => {
@@ -23,7 +23,7 @@ export default function Home() {
             handleFixed(false);          
           }
         });
-
+        window.innerWidth > 960 && setProjectTitle("FinHelper - Finances Helper");
         window.addEventListener('resize', e => {
           let size = window.innerWidth;
           if (size > 960) {

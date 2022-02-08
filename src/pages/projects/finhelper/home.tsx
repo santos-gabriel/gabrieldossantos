@@ -49,7 +49,7 @@ export default function Home() {
             <div className={styles.content}>
                 <div className={styles.about}>
                     <div>
-                        <img src="/FinHelper_purple.svg" alt="FinHelper" />
+                        <img src="/FinHelper_w410h248.png" alt="FinHelper" />
                     </div>
                     <div>
                         <p>

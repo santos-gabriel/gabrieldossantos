@@ -1,5 +1,5 @@
 import { faGithub, faGooglePlay, faInstagram, faLinkedin, faTelegram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import NavBarProject from "../../../components/NavBarProject";
 import { LinkIcon } from "../../../models/LinkIcons";
 import styles from '../../../styles/pages/Project.module.css';
@@ -11,7 +11,8 @@ export default function Home() {
         {icon:faGithub, link:"https://www.github.com/Santos-Gabriel/fin-helper", targetType:"_blank"},
         {icon:faGooglePlay, link:"https://play.google.com/store/apps/", targetType:"_blank"}];
 
-    const { handleFixed } = useContext(NavBarProjectsContext);    
+    const { handleFixed } = useContext(NavBarProjectsContext);
+    const [ projectTitle, setProjectTitle ] = useState("FinHelper");
 
     useEffect (() => {
         document.addEventListener('scroll', e => {
@@ -22,6 +23,16 @@ export default function Home() {
             handleFixed(false);          
           }
         });
+
+        document.addEventListener('resize', e => {
+          let size = window.innerWidth;
+          if (size > 525) {
+            console.log(`size ${size}`)
+            setProjectTitle("FinHelper - Finances Helper");
+          } else {
+            setProjectTitle("FinHelper");
+          }
+        });
       }, []); 
 
     
@@ -30,7 +41,7 @@ export default function Home() {
             
             <div>
                 <NavBarProject 
-                    projectName={'FinHelper - Finances Helper'} 
+                    projectName={projectTitle} 
                     projectImage="/FinHelper_purple.svg"
                     links={links}
                 />

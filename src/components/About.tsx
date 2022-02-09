@@ -33,23 +33,28 @@ export function About () {
                         <h1 className="font-zero">Software Skills</h1>
                         <div id={sytlesPercentBar.skillsImg}>
                             <div>
-                                <img src="/html5.svg" alt="Gabriel" />
-                                <img src="/css3.svg" alt="Gabriel" />                                
-                                <img src="/javascript.svg" alt="Gabriel" />
+                                <img src="/html5.svg" alt="html5" />
+                                <img src="/css3.svg" alt="css3" />                                
+                                <img src="/javascript.svg" alt="javascript" />
+                                <img src="/typescript.svg" alt="typescript" />
                             </div>
 
                             <div>
-                                <img src="/java.svg" alt="Gabriel" />
-                                <img src="/spring.svg" alt="Gabriel" />
+                                <img src="/java.svg" alt="java" />
+                                <img src="/spring.svg" alt="spring" />
                             </div>
 
                             <div>
-                                <img src="/dart.svg" alt="Gabriel" />
-                                <img src="/flutter.svg" alt="Gabriel" />                                
-                            </div>                            
+                                <img src="/react.svg" alt="react" />                                
+                            </div>
 
                             <div>
-                                <img src="/git.svg" alt="Gabriel" />
+                                <img src="/dart.svg" alt="dart" />
+                                <img src="/flutter.svg" alt="flutter" />                                
+                            </div>
+
+                            <div>
+                                <img src="/git.svg" alt="git" />
                                 {/* <img src="/mysql.svg" alt="Gabriel" />*/}
                             </div>                            
                         </div>                        

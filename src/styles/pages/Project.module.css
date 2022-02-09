@@ -62,6 +62,7 @@
     padding: 50px 0 0 0;
     border-left: 0;
     border-top: 1px solid #242323;
+    margin: 0 110px;
   }
 }
 
@@ -72,6 +73,9 @@
   .photo img {
     margin-right: 0;
     margin-bottom: 35px;
+  }
+  .photos {
+    margin: 0 50px;
   }
   .photo img:last-child {
     margin-bottom: 0;

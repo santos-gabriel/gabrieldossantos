@@ -54,6 +54,32 @@
   margin-right: 0;
 }
 
+.contentLinkProject {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contentLinkProject a:first-child {
+  width: 350px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-color);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.contentLinkProject a:hover {
+  background: #242323;
+}
+
+.contentLinkProject a div:last-child {
+  margin-left: 10px;
+  color: #fff;
+}
+
 @media (max-width: 1550px) {
   .content {
     grid-template-columns: 1fr;

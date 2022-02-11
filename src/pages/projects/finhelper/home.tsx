@@ -5,6 +5,7 @@ import { LinkIcon } from "../../../models/LinkIcons";
 import styles from '../../../styles/pages/Project.module.css';
 import { NavBarProjectsContext } from "../../../contexts/NavBarProjectsContext";
 import { FooterProject } from "../../../components/FooterProject";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
     let links: LinkIcon[] = [
@@ -67,7 +68,7 @@ export default function Home() {
                         </p>
                         <br />
                         <p>
-                            Para sua segurança e privacidade FinHelper conta com <b>proteção de acesso</b>, podendo ser habiliada a qualquer momento pelo app, 
+                            Para sua segurança e privacidade FinHelper conta com <b>proteção de acesso</b>, podendo ser habilitada a qualquer momento pelo app, 
                             quando habilitada seu acesso ficará protegido seja por senha, padrão, reconhecimento facial ou impressão digital.
                         </p>
                         <p>
@@ -77,17 +78,23 @@ export default function Home() {
                 </div>
                 <div className={styles.photos}>
                     <div className={styles.photo}>
-                        <img src="/home.jpg" alt="FinHelper" />
                         <img src="/first_login.jpg" alt="FinHelper" />
                         <img src="/add_revenue.jpg" alt="FinHelper" />
+                        <img src="/home.jpg" alt="FinHelper" />
                     </div>
                     <div className={styles.photo}>
                         <img src="/settings.jpg" alt="FinHelper" />
                         <img src="/splash.jpg" alt="FinHelper" />
                     </div>
                 </div>
-                
-                
+            </div>
+            <div className={`${styles.contentLinkProject}`}>
+                <a href={links[1].link}>
+                    <p>Começe agora mesmo</p>
+                    <div>
+                        <FontAwesomeIcon icon={faGooglePlay}/>
+                    </div>
+                </a>
             </div>
             <FooterProject linksIcons={[]} />
         </div>

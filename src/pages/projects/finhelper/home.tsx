@@ -77,13 +77,13 @@ export default function Home() {
                 </div>
                 <div className={styles.photos}>
                     <div className={styles.photo}>
-                        <img src="/home.jpega" alt="FinHelper" />
-                        <img src="/first_login.jpeg" alt="FinHelper" />
-                        <img src="/add_revenue.jpeg" alt="FinHelper" />
+                        <img src="/home.jpg" alt="FinHelper" />
+                        <img src="/first_login.jpg" alt="FinHelper" />
+                        <img src="/add_revenue.jpg" alt="FinHelper" />
                     </div>
                     <div className={styles.photo}>
-                        <img src="/settings.jpeg" alt="FinHelper" />
-                        <img src="/splash.jpeg" alt="FinHelper" />
+                        <img src="/settings.jpg" alt="FinHelper" />
+                        <img src="/splash.jpg" alt="FinHelper" />
                     </div>
                 </div>
                 

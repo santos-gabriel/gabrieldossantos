@@ -77,31 +77,41 @@ export default function Home() {
                     </div>
                     <div id={styles.divider}></div>
                     <div>
+                        <h3>Tech's</h3>
                         <p>
-                            <b>FinHelper</b> é um acrônimo para <i>Finances Helper</i>, que traduzido diretamente para o português significa Ajudante de Finanças. 
-                            E este é seu papel, ajudar nas finanças pessoais de todos que buscam um melhor controle de sua vida financeira.
+                            A construção do aplicativo <b>FinHelper</b> baseou-se em grandes tecnologias que resolvessem as necessidades pertinentes ao 
+                            projeto, o mesmo foi constuído com linguagem de programação <b>Dart</b>.
+                        </p> 
+                        <br />
+                        <p>
+                            Neste projeto fez-se o uso do kit de desenvolvimento que foi criado pela própria <b>Google</b> o <b>Flutter</b>, 
+                            que tem como premissa um desenvolvimento multiplataforma onde pode-se utilizar do mesmo desenvolvimento para realizar a
+                            criação de aplicativos para Android, IOS, WEB e Desktop.
+                            Como design fez-se o uso dos padrões oferecidos pelo <b>Material Design</b> desenvolvido também pela Google
                         </p>
                         <br />
                         <p>
-                            FinHelper se trata de um aplicativo com o objetivo de auxiliar nas finanças pessoais, podendo gerenciar suas receitas
-                            e despesas pessoais, categorizando por <b>Fixas</b> e <b>Não Fixas</b> tanto as despesas quanto as receitas podem ser categorizadas.
-                        </p>
-                        <p>
-                            FinHelper pode ser acessado de qualquer lugar, podendo ser utilizado até mesmo sem acesso a <b>internet</b>. Basta apenas 
-                            um celular e uma vontade de organização financeira pessoal.
+                            Para auxílio no processo de desenovlimento foi-se utilizado diversas <b>bibliotecas</b>, dentre elas é importante citar algumas como: 
+                             <i> google_fonts, shared_preferences, intl, image_picker, local_auth, flutter_icons</i>, dentre outras...
                         </p>
                         <br />
                         <p>
-                            Para sua segurança e privacidade FinHelper conta com <b>proteção de acesso</b>, podendo ser habilitada a qualquer momento pelo app, 
-                            quando habilitada seu acesso ficará protegido seja por senha, padrão, reconhecimento facial ou impressão digital.
+                            Como editor de código utilizou-se do <b>Visual Studio Code</b>, editor desenvolvido pela <b>Microsoft. </b> 
+                        {/* </p> */}
+                        {/* <p> */}
+                            Armazenado o código fonte em repositório aberto, hospedado no <b>GitHub</b>.
                         </p>
                         <p>
-                            Ainda pensando na sua segurança e privacidade, o aplicativo armazena seus dados em seu próprio dispositivo.
+                            Para testagem utilizou-se de dispositivos físicos, e virtuais como o <b>AVD <i>(Android Virtual Devices)</i></b>.
                         </p>
                     </div>
                     <div className={styles.technologies}>
                         <img src="/dart.svg" alt="dart" />
                         <img src="/flutter.svg" alt="flutter" />
+                        <img src="/vscode.svg" alt="dart" />
+                        {/* <img src="/github.svg" alt="flutter" /> */}
+                        <FontAwesomeIcon icon={faGithub} className={styles.github} />
+                        <img src="/android.svg" alt="flutter" />
                     </div>
                 </div>
                 <div className={styles.photos}>

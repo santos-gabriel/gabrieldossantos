@@ -167,6 +167,10 @@ select:focus {
   margin: 0 auto;
 }
 
+.projects {
+  padding-top: 0;
+}
+
 h1,
 h2,
 h3,

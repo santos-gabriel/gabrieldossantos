@@ -75,22 +75,50 @@ export default function Home() {
                             Ainda pensando na sua segurança e privacidade, o aplicativo armazena seus dados em seu próprio dispositivo.
                         </p>
                     </div>
+                    <div id={styles.divider}></div>
+                    <div>
+                        <p>
+                            <b>FinHelper</b> é um acrônimo para <i>Finances Helper</i>, que traduzido diretamente para o português significa Ajudante de Finanças. 
+                            E este é seu papel, ajudar nas finanças pessoais de todos que buscam um melhor controle de sua vida financeira.
+                        </p>
+                        <br />
+                        <p>
+                            FinHelper se trata de um aplicativo com o objetivo de auxiliar nas finanças pessoais, podendo gerenciar suas receitas
+                            e despesas pessoais, categorizando por <b>Fixas</b> e <b>Não Fixas</b> tanto as despesas quanto as receitas podem ser categorizadas.
+                        </p>
+                        <p>
+                            FinHelper pode ser acessado de qualquer lugar, podendo ser utilizado até mesmo sem acesso a <b>internet</b>. Basta apenas 
+                            um celular e uma vontade de organização financeira pessoal.
+                        </p>
+                        <br />
+                        <p>
+                            Para sua segurança e privacidade FinHelper conta com <b>proteção de acesso</b>, podendo ser habilitada a qualquer momento pelo app, 
+                            quando habilitada seu acesso ficará protegido seja por senha, padrão, reconhecimento facial ou impressão digital.
+                        </p>
+                        <p>
+                            Ainda pensando na sua segurança e privacidade, o aplicativo armazena seus dados em seu próprio dispositivo.
+                        </p>
+                    </div>
+                    <div className={styles.technologies}>
+                        <img src="/dart.svg" alt="dart" />
+                        <img src="/flutter.svg" alt="flutter" />
+                    </div>
                 </div>
                 <div className={styles.photos}>
                     <div className={styles.photo}>
-                        <img src="/first_login.jpg" alt="FinHelper" />
-                        <img src="/add_revenue.jpg" alt="FinHelper" />
-                        <img src="/home.jpg" alt="FinHelper" />
+                        <img src="/first_login.svg" alt="FinHelper" />
+                        <img src="/add_revenue.svg" alt="FinHelper" />
+                        <img src="/home.svg" alt="FinHelper" />
                     </div>
                     <div className={styles.photo}>
-                        <img src="/settings.jpg" alt="FinHelper" />
-                        <img src="/splash.jpg" alt="FinHelper" />
+                        <img src="/settings.svg" alt="FinHelper" />
+                        <img src="/splash.svg" alt="FinHelper" />
                     </div>
                 </div>
             </div>
             <div className={`${styles.contentLinkProject}`}>
                 <a href={links[1].link}>
-                    <p>Começe agora mesmo</p>
+                    <p>Conheça agora mesmo</p>
                     <div>
                         <FontAwesomeIcon icon={faGooglePlay}/>
                     </div>

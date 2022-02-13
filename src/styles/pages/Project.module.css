@@ -29,10 +29,10 @@
 
 .about h3 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   color: #fff;
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .about div:not(:first-child) {
@@ -57,7 +57,7 @@
 }
 
 .photo img {
-  max-width: 200px;
+  max-width: 260px;
   margin-right: 35px;
   border-radius: 5px;
 }
@@ -94,7 +94,7 @@
 }
 
 #divider {
-  margin: 30px 0;
+  margin: 70px 0 40px 0;
   border-bottom: 1px solid #242323;
   width: 50%;
 }
@@ -105,7 +105,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .technologies img {
@@ -113,10 +113,117 @@
   max-height: 5rem;
 }
 
-.technologies .github {
+.technologies .techProject {
   width: 5rem;
   height: 5rem;
 }
+
+/* Modal start */
+.myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modalContent {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 100vw;
+  max-height: 80vh;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modalContent,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 85px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modalContent {
+    width: 100%;
+  }
+}
+
+.modalActive {
+  display: block;
+}
+
+#myModal {
+}
+/* Modal end */
 
 @media (max-width: 1550px) {
   .content {
@@ -126,7 +233,7 @@
     padding: 50px 0 0 0;
     border-left: 0;
     border-top: 1px solid #242323;
-    margin: 0 110px;
+    /* margin: 0 110px; */
   }
 }
 
@@ -148,6 +255,30 @@
     padding: 0 20px;
   }
   .about div:first-child {
+    max-width: 60%;
+  }
+  .about div:not(last-child) {
     max-width: 40%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .technologies img {
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+
+  .technologies .techProject {
+    width: rem;
+    height: 3rem;
+  }
+
+  .close {
+    right: 5px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
   }
 }

@@ -13,7 +13,11 @@ export default function Home() {
         {icon:faGooglePlay, link:"https://play.google.com/store/apps/", targetType:"_blank"}];
 
     const { handleFixed } = useContext(NavBarProjectsContext);
-    const [ projectTitle, setProjectTitle ] = useState("FinHelper");    
+    const [ projectTitle, setProjectTitle ] = useState("FinHelper");
+
+    const [ modalIsShowing, setModalIsShowing ] = useState(false);
+    const [ imgModal, setImgModal ] = useState("");
+    const [ captionModal, setCaptionModal] = useState("");
 
     useEffect (() => {
         document.addEventListener('scroll', e => {
@@ -34,6 +38,12 @@ export default function Home() {
           }
         });
       }, []); 
+
+      function handleShowModal(imgModal, caption) {
+        setModalIsShowing(!modalIsShowing);
+        setImgModal(imgModal);
+        setCaptionModal(caption);
+      }
 
     
     return (
@@ -89,6 +99,9 @@ export default function Home() {
                             criação de aplicativos para Android, IOS, WEB e Desktop.
                             Como design fez-se o uso dos padrões oferecidos pelo <b>Material Design</b> desenvolvido também pela Google
                         </p>
+                        <p>Adentrando no Flutter, neste projeto fez-se a utilização de diversas funcionalidades que o kit de desenvolvimento da Google pode oferecer, 
+                            dentre elas vale resaltar: <i>contextos, estados, rotas, componentização dentre outras</i>. 
+                           </p>
                         <br />
                         <p>
                             Para auxílio no processo de desenovlimento foi-se utilizado diversas <b>bibliotecas</b>, dentre elas é importante citar algumas como: 
@@ -110,24 +123,24 @@ export default function Home() {
                         <img src="/flutter.svg" alt="flutter" />
                         <img src="/vscode.svg" alt="dart" />
                         {/* <img src="/github.svg" alt="flutter" /> */}
-                        <FontAwesomeIcon icon={faGithub} className={styles.github} />
+                        <FontAwesomeIcon icon={faGithub} className={styles.techProject} />
                         <img src="/android.svg" alt="flutter" />
                     </div>
                 </div>
                 <div className={styles.photos}>
                     <div className={styles.photo}>
-                        <img src="/first_login.svg" alt="FinHelper" />
-                        <img src="/add_revenue.svg" alt="FinHelper" />
-                        <img src="/home.svg" alt="FinHelper" />
+                        <img className={styles.myImg} src="/first_login.svg" alt="FinHelper" onClick={() => {handleShowModal("/splash.svg", "Tela de Cadastro")}} />
+                        <img className={styles.myImg} src="/add_revenue.svg" alt="FinHelper" onClick={() => {handleShowModal("/add_revenue.svg", "Tela de Adição de Receita")}} />
+                        <img className={styles.myImg} src="/home.svg" alt="FinHelper" onClick={() => {handleShowModal("/home.svg", "Tela Inicial")}} />
                     </div>
                     <div className={styles.photo}>
-                        <img src="/settings.svg" alt="FinHelper" />
-                        <img src="/splash.svg" alt="FinHelper" />
+                        <img className={styles.myImg} src="/settings.svg" alt="FinHelper" onClick={() => {handleShowModal("/settings.svg", "Tela de Configurações")}} />
+                        <img className={styles.myImg} src="/splash.svg" alt="FinHelper" onClick={() => {handleShowModal("/splash.svg", "Tela de Splash")}} />
                     </div>
                 </div>
             </div>
             <div className={`${styles.contentLinkProject}`}>
-                <a href={links[1].link}>
+                <a href="https://play.google.com/store/apps/">
                     <p>Conheça agora mesmo</p>
                     <div>
                         <FontAwesomeIcon icon={faGooglePlay}/>
@@ -135,6 +148,22 @@ export default function Home() {
                 </a>
             </div>
             <FooterProject linksIcons={[]} />
+            
+            
+            <>
+                <div className={modalIsShowing ? `${styles.modal} ${styles.modalActive}` : `${styles.modal}`} id={styles.myModal}>
+                    <span className={styles.close} onClick={() => {handleShowModal("", "")}} >&times;</span>
+                    <img className={styles.modalContent} id={styles.img01} src={imgModal}/>
+                    <div id={styles.caption}>{captionModal}</div>
+                </div>
+            </>
+             
+
+            
+
+
+
         </div>
+        
     );
 }

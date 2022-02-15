@@ -85,7 +85,8 @@
 }
 
 .contentLinkProject a:hover {
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
+  background: rgba(242, 116, 5, 0.7);
 }
 
 .contentLinkProject a div:last-child {

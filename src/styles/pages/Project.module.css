@@ -68,10 +68,11 @@
 
 .contentLinkProjectPlayStore {
   text-align: center;
+  margin-top: 5rem;
 }
 
 .contentLinkProjectPlayStore img {
-
+  max-width: 15rem;
 }
 
 .contentLinkProject {

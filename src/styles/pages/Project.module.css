@@ -66,6 +66,14 @@
   margin-right: 0;
 }
 
+.contentLinkProjectPlayStore {
+  text-align: center;
+}
+
+.contentLinkProjectPlayStore img {
+
+}
+
 .contentLinkProject {
   margin-top: 5rem;
   display: flex;

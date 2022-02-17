@@ -139,13 +139,14 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className={`${styles.contentLinkProject}`}>
-                <a href="https://play.google.com/store/apps/">
+            <div className={`${styles.contentLinkProjectPlayStore}`}>
+                <a href='http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Disponível no Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png'/></a>
+                {/* <a href="https://play.google.com/store/apps/">
                     <p>Conheça agora mesmo</p>
                     <div>
                         <FontAwesomeIcon icon={faGooglePlay}/>
                     </div>
-                </a>
+                </a> */}
             </div>
             <FooterProject linksIcons={[]} />
             

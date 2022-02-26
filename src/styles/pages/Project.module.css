@@ -220,7 +220,6 @@
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
   .modalContent {
     width: 100%;
@@ -230,10 +229,6 @@
 .modalActive {
   display: block;
 }
-
-#myModal {
-}
-/* Modal end */
 
 @media (max-width: 1550px) {
   .content {

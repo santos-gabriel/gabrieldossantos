@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Home() {
     let links: LinkIcon[] = [
         {icon:faGithub, link:"https://www.github.com/Santos-Gabriel/fin-helper", targetType:"_blank"},
-        {icon:faGooglePlay, link:"https://play.google.com/store/apps/", targetType:"_blank"}];
+        {icon:faGooglePlay, link:"https://play.google.com/store/apps/details?id=br.com.gabrieldossantos.finhelper&hl=pt-BR", targetType:"_blank"}];
 
     const { handleFixed } = useContext(NavBarProjectsContext);
     const [ projectTitle, setProjectTitle ] = useState("FinHelper");
@@ -140,7 +140,9 @@ export default function Home() {
                 </div>
             </div>
             <div className={`${styles.contentLinkProjectPlayStore}`}>
-                <a href='http://play.google.com/store/?pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Disponível no Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png'/></a>
+                <a href='https://play.google.com/store/apps/details?id=br.com.gabrieldossantos.finhelper&hl=pt-BR' target="_blank">
+                    <img alt='Disponível no Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png'/>
+                </a>
                 {/* <a href="https://play.google.com/store/apps/">
                     <p>Conheça agora mesmo</p>
                     <div>

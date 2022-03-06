@@ -9,12 +9,13 @@ export function About () {
         <>
             <Title text={'sobre'} id={'aboutTitle'}/>
                     
-                <div className={`content ${styles.about}`}>
+            <div className={`content ${styles.about}`}>
 
 
                 <div className={styles.imgAbout}>
+                    <h1 className="font-zero">Sobre Gabriel</h1>
                     <img src="/front-gabriel.svg" alt="Gabriel" />
-                    <p>Me chamo Gabriel dos Santos tenho 21 anos, sou desenvolvedor de software e formado em Análise e Desenvolvimento de Sistemas. 
+                    <p>Me chamo Gabriel dos Santos tenho {new Date().getFullYear().toString().substr(-2)} anos, sou desenvolvedor de software e formado em Análise e Desenvolvimento de Sistemas. 
                     Iniciei-me neste mundo da tecnologia aos meus 17 anos, tive minha primeira oportunidade na área da tecnologia aos meus 18 anos, sendo como auxiliar de TI em uma clínica psiquiátrica onde junto com a equipe de TI pestava suporte e zelava 
                     por toda a infraestrutura de redes da clínica, mantendo sempre seu funcionamento efetivo.
                     </p>
@@ -30,20 +31,37 @@ export function About () {
                 <div className={sytlesPercentBar.skills}>
                     <div className={sytlesPercentBar.center}>
                         <h1 className="font-zero">Software Skills</h1>
-                        <PercentBar title={'java'} percent={65} />
-                        <PercentBar title={'javascript'} percent={30} />
-                        <PercentBar title={'delphi'} percent={65} />
-                        <PercentBar title={'html'} percent={50} />
-                        <PercentBar title={'css'} percent={40} />
-                        <PercentBar title={'react'} percent={20} />
-                        <PercentBar title={'react native'} percent={15} />
-                        <PercentBar title={'node'} percent={35} />
-                        <PercentBar title={'sql'} percent={65} />
-                        <PercentBar title={'git'} percent={60} />
+                        <div id={sytlesPercentBar.skillsImg}>
+                            <div>
+                                <img src="/html5.svg" alt="html5" />
+                                <img src="/css3.svg" alt="css3" />                                
+                                <img src="/javascript.svg" alt="javascript" />
+                                <img src="/typescript.svg" alt="typescript" />
+                            </div>
+
+                            <div>
+                                <img src="/java.svg" alt="java" />
+                                <img src="/spring.svg" alt="spring" />
+                            </div>
+
+                            <div>
+                                <img src="/react.svg" alt="react" />                                
+                            </div>
+
+                            <div>
+                                <img src="/dart.svg" alt="dart" />
+                                <img src="/flutter.svg" alt="flutter" />                                
+                            </div>
+
+                            <div>
+                                <img src="/git.svg" alt="git" />
+                                {/* <img src="/mysql.svg" alt="Gabriel" />*/}
+                            </div>                            
+                        </div>                        
                     </div>
                 </div>
-                
-                </div>            
+            
+            </div>
         </>
     );
 }

@@ -10,7 +10,7 @@ export function HomeTop () {
     useEffect (() => {
       document.addEventListener('scroll', e => {
         let scrollPosition = document.scrollingElement.scrollTop;
-        if (scrollPosition > 50) {          
+        if (scrollPosition > 50) {
           handleFixed(true);                   
         } else {
           handleFixed(false);          

@@ -1,37 +1,36 @@
-.footer{
-    height: 300px;
+.footer {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
 }
 
-.footer .footerRedes{
-    position: relative;
-    top: 135px;
-    text-align: center;
-    font-size: 2rem;
+.footer .footerRedes {
+  text-align: center;
+  font-size: 2rem;
 }
 
-.footer .footerRedes a{
-    color: #fff;
-    margin: 5px;
+.footer .footerRedes a {
+  color: #fff;
+  margin: 5px;
 }
 
-.footer .footerRedes a svg{
-    font-size: 2rem;
+.footer .footerRedes a svg {
+  font-size: 2rem;
 }
 
-.footer .footerTextos{
-    position: relative;
-    top: 160px;
-    text-align: center;
-    font-size: 1rem;
+.footer .footerTextos {
+  text-align: center;
+  font-size: 1rem;
 }
 
-.footer .footerTextos p{
-    color: #fff;
+.footer .footerTextos p {
+  color: #fff;
 }
 
 .footerRedes a:hover,
-.footerTextos i:hover{
+.footerTextos i:hover {
   color: var(--secondary-color);
 }
- 
-

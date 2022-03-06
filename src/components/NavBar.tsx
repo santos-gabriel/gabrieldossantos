@@ -15,8 +15,10 @@ export function NavBar() {
 
     const { isFixed } = useContext(NavBarContext);
 
-    function handleColapseNavBar(e) {        
-        e.preventDefault();
+    function handleColapseNavBar(e) {
+        if (e !== null) {
+            e.preventDefault();
+        }
         setActiveColapseNavBarToggle(!activeColapseNavBarToggle);
     }
 
@@ -57,7 +59,8 @@ export function NavBar() {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}                            
+                            duration={500}
+                            onClick={activeColapseNavBarToggle ? () => handleColapseNavBar(null) : () => {}}
                             >
                                 <p className={styles.itemNavbar}>Home</p>
                             </Link>
@@ -70,6 +73,7 @@ export function NavBar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
+                                onClick={activeColapseNavBarToggle ? () => handleColapseNavBar(null) : () => {}}
                                 >
                                     <p className={styles.itemNavbar}>Sobre</p>
                             </Link>
@@ -82,9 +86,23 @@ export function NavBar() {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
+                                onClick={activeColapseNavBarToggle ? () => handleColapseNavBar(null) : () => {}}
                                 >
                                     <p className={styles.itemNavbar}>Conquistas</p>
                             </Link>                             
+                        </li>
+                        <li>
+                            <Link
+                                activeClass={styles.active}
+                                to="projects"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                onClick={activeColapseNavBarToggle ? () => handleColapseNavBar(null) : () => {}}
+                            >
+                                <p className={styles.itemNavbar}>Projetos</p>
+                            </Link>
                         </li>
                     </ul>
 

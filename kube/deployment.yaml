@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gabrieldossantos-app
+  labels:
+    app: gabrieldossantos-app
+spec:
+  template:
+    metadata:
+      name: gabrieldossantos-app
+      labels:
+        app: gabrieldossantos-app
+    spec:
+      containers:
+        - name: gabrieldossantos-app-container
+          image: dossantosgabriel/gabrieldossantos:v1
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            periodSeconds: 10
+            failureThreshold: 3
+            initialDelaySeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            periodSeconds: 10
+            failureThreshold: 5
+            initialDelaySeconds: 3
+          resources:
+            requests:
+              cpu: 50m
+            #   memory: 32Mi
+            # limits:
+            #   cpu: 100m
+            #   memory: 64Mi
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gabrieldossantos-app
